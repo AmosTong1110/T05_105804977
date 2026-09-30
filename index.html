@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Energy Lens | TV efficiency</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="index.html" aria-label="Energy Lens home">
+			<span class="brand-mark" aria-hidden="true">EL</span>
+			<span>Energy Lens</span>
+		</a>
+		<nav aria-label="Primary navigation">
+			<a class="nav-link active" href="index.html">Overview</a>
+			<a class="nav-link" href="#method">About the data</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="intro" aria-labelledby="page-title">
+			<div class="eyebrow"><span class="eyebrow-dot"></span>Home / TV energy profile</div>
+			<h1 id="page-title">A clearer view of<br><em>energy efficiency.</em></h1>
+			<p class="intro-copy">Explore the energy story behind modern televisions: compare labelled annual consumption with star ratings, see how screen technology performs at 55 inches and across all sizes, then place those household figures alongside Australian average spot power prices from 1998 to 2024. Hover over each chart to inspect the underlying model, technology, or year.</p>
+		</section>
+
+		<section class="dashboard" aria-labelledby="chart-title">
+			<div class="dashboard-heading">
+				<div>
+					<p class="section-kicker">Dataset 01 / TV energy</p>
+					<h2 id="chart-title">Energy consumption vs star rating</h2>
+				</div>
+				<div class="legend" aria-label="Chart legend">
+					<span class="legend-dot"></span>
+					<span>Each point is a TV model</span>
+				</div>
+			</div>
+			<div class="chart-wrap">
+				<div id="chart" role="img" aria-label="Scatter plot showing television energy consumption against star rating"></div>
+				<div id="chart-status" class="chart-status">Loading the dataset...</div>
+			</div>
+			<div class="chart-note">
+				<span class="note-line"></span>
+				<span>Hover over a point to inspect its model details.</span>
+			</div>
+		</section>
+
+		<section class="bar-section" aria-labelledby="bar-title">
+			<div class="dashboard-heading">
+				<div>
+					<p class="section-kicker">Dataset 02 / 55-inch TV energy</p>
+					<h2 id="bar-title">Which screen technology uses more?</h2>
+				</div>
+				<p class="bar-description">Mean labelled annual consumption for 55-inch televisions, grouped by screen technology.</p>
+			</div>
+			<div class="bar-chart-wrap">
+				<div id="bar-chart" role="img" aria-label="Bar chart comparing annual energy consumption for LCD, LED, and OLED 55-inch televisions"></div>
+				<div id="bar-chart-status" class="chart-status">Loading 55-inch screen technology data...</div>
+			</div>
+			<div class="chart-note">
+				<span class="note-line"></span>
+				<span>Hover over a bar to inspect the mean annual consumption.</span>
+			</div>
+		</section>
+
+		<section class="donut-section" aria-labelledby="donut-title">
+			<div class="dashboard-heading">
+				<div>
+					<p class="section-kicker">Dataset 03 / Screen technology</p>
+					<h2 id="donut-title">Where the energy goes</h2>
+				</div>
+				<p class="donut-description">Mean labelled annual consumption across every TV size in the supplied data.</p>
+			</div>
+			<div class="donut-layout">
+				<div class="donut-wrap">
+					<div id="donut-chart" role="img" aria-label="Donut chart comparing average annual energy consumption by screen technology"></div>
+					<div id="donut-status" class="chart-status">Loading screen technology data...</div>
+				</div>
+				<div id="donut-legend" class="donut-legend" aria-label="Screen technology energy legend"></div>
+			</div>
+		</section>
+
+		<section class="line-section" aria-labelledby="line-title">
+			<div class="dashboard-heading">
+				<div>
+					<p class="section-kicker">Dataset 04 / Australian Energy Regulator</p>
+					<h2 id="line-title">Spot power prices over time</h2>
+				</div>
+				<div class="legend" aria-label="Chart legend">
+					<span class="line-legend-swatch"></span>
+					<span>Average annual price</span>
+				</div>
+			</div>
+			<div class="line-chart-wrap">
+				<div id="line-chart" role="img" aria-label="Line chart showing average Australian spot power prices from 1998 to 2024"></div>
+				<div id="line-chart-status" class="chart-status">Loading spot-price data...</div>
+			</div>
+			<div class="chart-note">
+				<span class="note-line"></span>
+				<span>Hover over a year to inspect the average spot price.</span>
+			</div>
+		</section>
+
+		<section id="method" class="method">
+			<div>
+				<p class="section-kicker">Reading the chart</p>
+				<h2>More stars, less energy?</h2>
+			</div>
+			<p>Every dot represents a TV entry from the supplied dataset. The horizontal axis shows the product's star rating; the vertical axis shows labelled energy consumption in kWh per year. Use the pattern of points to compare efficiency across different screen technologies and sizes.</p>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<span class="footer-name">TONG CHUNG ZHE</span>
+		<span class="footer-credit">Generating code using GenAI</span>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="Charts/load_data.js"></script>
+	<script src="Charts/Scatter_plot.js"></script>
+	<script src="Charts/Bar_Chart.js"></script>
+	<script src="Charts/Donut.js"></script>
+	<script src="Charts/Line.js"></script>
+</body>
+</html>
