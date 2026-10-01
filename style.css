@@ -40,8 +40,8 @@ nav { display: flex; gap: 29px; }
 
 main { padding: 77px 34px 0; }
 .intro { max-width: 720px; padding-bottom: 62px; }
-.eyebrow, .section-kicker { text-transform: uppercase; letter-spacing: .13em; font-size: 11px; font-weight: 700; color: var(--teal); }
-.eyebrow { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; }
+.eyebrow{ text-transform: uppercase; letter-spacing: .13em; font-size: 11px; font-weight: 700; color: var(--teal);
+display: flex; align-items: center; gap: 8px; margin-bottom: 22px; }
 .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 h1, h2, p { margin: 0; }
 h1, h2 { font-family: "Space Grotesk", sans-serif; letter-spacing: -.045em; }
@@ -125,11 +125,9 @@ h2 { font-size: clamp(25px, 3vw, 38px); line-height: 1.08; }
 	.line-chart-wrap, #line-chart { min-height: 330px; }
 	.method { grid-template-columns: 1fr; gap: 25px; padding: 55px 0 65px; }
 	.donut-section { margin-top: 48px; padding: 24px 14px 20px; }
-	.donut-section .dashboard-heading { display: block; }
 	.donut-description { margin-top: 16px; }
 	.donut-layout { grid-template-columns: 1fr; gap: 10px; }
 	.bar-section { margin-top: 48px; padding: 24px 14px 20px; }
-	.bar-section .dashboard-heading { display: block; }
 	.bar-description { margin-top: 16px; }
 	.site-footer { padding: 20px; }
 }
